@@ -13,7 +13,7 @@ $('<div id="rcr-anchor"></div>').appendTo(mainPanel); //Bind anchor to main pane
 
 
 
-const proxyStore = new Store('iagdjhocgbkfdahcdegiachcdhkggfob', {portName: 'example'});
+const proxyStore = new Store({portName: 'example', 'extensionId' : 'iagdjhocgbkfdahcdegiachcdhkggfob' });
 
 
 

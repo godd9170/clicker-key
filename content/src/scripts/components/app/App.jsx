@@ -6,30 +6,27 @@ class App extends Component {
     super(props);
   }
 
-  // componentDidMount() {
-  //   document.addEventListener('click', () => {
-  //     console.log('gmail: ', this.props.gmail);
-  //     console.log('email: ', this.props.gmail.get.user_email());
-  //     this.props.dispatch({
-  //       type: 'ADD_COUNT'
-  //     });
-  //   });
-  // }
+  componentDidMount() {
+    document.addEventListener('click', () => {
+      this.props.dispatch({
+        type: 'ADD_COUNT'
+      });
+    });
+  }
 
   render() {
     return (
       <div>
-        {this.props.gmail.get.user_email()}
+        {this.props.gmail.get.user_email()}: {this.props.count}
       </div>
     );
   }
 }
 
-// const mapStateToProps = (state) => {
-//   return {
-//     count: state.count
-//   };
-// };
+const mapStateToProps = (state) => {
+  return {
+    count: state.count
+  };
+};
 
-// export default connect(mapStateToProps)(App);
-export default App;
+export default connect(mapStateToProps)(App);
